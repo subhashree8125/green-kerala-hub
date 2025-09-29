@@ -14,6 +14,7 @@ import Schemes from "./pages/Schemes";
 import Weather from "./pages/Weather";
 import SoilHealth from "./pages/SoilHealth";
 import Profile from "./pages/Profile";
+import Labour from "./pages/Labour";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -36,6 +37,7 @@ const App = () => (
             <Route path="weather" element={<Weather />} />
             <Route path="soil" element={<SoilHealth />} />
             <Route path="profile" element={<Profile />} />
+            <Route path="labour" element={<Labour />} />
           </Route>
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
