@@ -20,7 +20,7 @@ interface Equipment {
 }
 
 const Equipment = () => {
-  const [filterType, setFilterType] = useState<string>("");
+  const [filterType, setFilterType] = useState<string>("all");
   const [sortBy, setSortBy] = useState<string>("name");
 
   const equipmentList: Equipment[] = [
@@ -92,7 +92,7 @@ const Equipment = () => {
   ];
 
   const equipmentTypes = [
-    { value: "", label: "All Equipment" },
+    { value: "all", label: "All Equipment" },
     { value: "tractor", label: "Tractors" },
     { value: "drone", label: "Drones" },
     { value: "harvester", label: "Harvesters" },
@@ -101,7 +101,7 @@ const Equipment = () => {
   ];
 
   const filteredEquipment = equipmentList.filter(equipment => 
-    filterType === "" || equipment.type === filterType
+    filterType === "all" || equipment.type === filterType
   );
 
   const sortedEquipment = filteredEquipment.sort((a, b) => {
